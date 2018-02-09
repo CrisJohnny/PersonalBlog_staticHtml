@@ -1,0 +1,458 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("s_y").style.display="block";
+		document.getElementById("grjj").style.display="none";
+		document.getElementById("jbxx").style.display="none";
+		document.getElementById("lyb").style.display="none";	
+		self.setInterval("clock()",50);
+		
+	}
+function clock()
+  {
+	  var now=new Date();
+  var year = now.getFullYear();       //年
+  var month = now.getMonth() + 1;     //月
+  var day = now.getDate();            //日
+  var hh = now.getHours();            //时
+  var mm = now.getMinutes();          //分
+  var ss=now.getSeconds();
+  var clock = year + "-";
+  if(month < 10)clock += "0";
+  clock += month + "-";
+  if(day < 10)clock += "0";
+  clock += day + " ";
+  if(hh < 10)clock += "0";
+  clock += hh + ":";
+  if (mm < 10) clock += '0'; 
+  clock += mm + ":"; 
+  if (ss < 10) clock += '0'; 
+  clock += ss; 
+  document.getElementById('clock').innerHTML=clock;
+  }
+	function cd(d){
+		switch(d){
+			case 's_y' :
+				document.getElementById("s_y").style.display="block";
+				document.getElementById("grjj").style.display="none";
+				document.getElementById("jbxx").style.display="none";
+				document.getElementById("lyb").style.display="none";
+				break;
+			case 'grjj' :
+				document.getElementById("s_y").style.display="none";
+				document.getElementById("grjj").style.display="block";
+				document.getElementById("jbxx").style.display="none";
+				document.getElementById("lyb").style.display="none";
+				break;
+			case 'jbxx' :
+				document.getElementById("s_y").style.display="none";
+				document.getElementById("grjj").style.display="none";
+				document.getElementById("jbxx").style.display="block";
+				document.getElementById("lyb").style.display="none";
+				break;
+			case 'lyb' :
+				document.getElementById("s_y").style.display="none";
+				document.getElementById("grjj").style.display="none";
+				document.getElementById("jbxx").style.display="none";
+				document.getElementById("lyb").style.display="block";
+				break;
+			
+		}
+	}
+		
+function xs(d){
+	var a=document.getElementById(d);
+	a.style.display="block";
+	if(d=="d1_6"){
+		document.getElementById('d1_7').style.display="none";
+	}else if(d=="d1_7"){
+		document.getElementById('d1_6').style.display="none";
+	}
+		
+}
+
+	
+function xs2(d){
+    setTimeout(function(){document.getElementById(d).style.display="none";},1000);
+}
+function xs3(d){
+	document.getElementById(d).style.display="none";
+}
+function bg(d){
+	document.getElementById('d0').style.cssText="background-image:"+d+";";
+	
+}
+function fk(){
+	var a=document.getElementById('s_y_11');
+	a.style.height="50px";
+	a.style.animation="xl 3s linear";
+	a.style.animationFillMode="forwards";
+	document.getElementById('s1').innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*";
+}
+
+function fk2(){
+	var a=document.getElementById('s_y_11');
+	a.style.animation="xl2 3s linear";
+	a.style.animationFillMode="forwards";
+}
+
+function fk3(){
+	var a=document.getElementById('s_y_11');
+	a.style.animation="xl2 3s linear";
+	a.style.animationFillMode="forwards";
+}
+	
+/*
+function iframe(d){
+	document.getElementById('d1_f').src=d;
+}
+
+function bg(){
+	document.getElementById('i1').style.backgroundImage=document.getElementById('i1').value;
+}
+*/
+function tb(d){
+	var a=document.getElementById(d);
+	a.style.animation="xz 1s linear";
+	a.style.animationDirection="alternate";
+}
+
+function yd(){
+	var a=document.getElementById('s_y_14');
+	a.style.animation="yd 1s linear";
+	a.style.animationFillMode="forwards";
+}
+
+function zan(){
+	var a=document.getElementById('t_2_1');
+	var b=parseInt(a.innerHTML)+1;
+	a.innerHTML=b;
+}
+
+function lz(d){
+	var a=document.getElementById(d).lastChild;
+	a.style.display="block";
+	
+}
+
+function lz2(d){
+	var a=document.getElementById(d).lastChild;
+	setTimeout(function(){a.style.display="none";},2000);
+	
+}
+function zan2(d){
+	var a=document.getElementById(d);
+	var b=parseInt(a.innerHTML)+1;
+	a.innerHTML=b;
+}
+
+function bg1(d){
+	document.getElementById('d0').style.cssText="background-image:d;";
+}
+
+function rl(d){
+    var a=document.getElementById(d);
+	a.style.animation="rl 1s linear";
+	a.style.animationFillMode="forwards";
+}
+
+function rl2(d){
+	var a=document.getElementById(d);
+	a.style.animation="rl2 1s linear";
+	a.style.animationFillMode="forwards";
+}
+
+function sr(){
+	document.getElementById('c_1_bk').style.display="block";
+	document.getElementById('c_1_t').style.display="block";
+	document.getElementById('c_1_b').style.display="block";
+}
+
+function tj(d){
+	var a=document.getElementById('c_1_t').value;
+	document.getElementById(d).innerHTML=a;
+	a="";
+	document.getElementById('c_1_bk').style.display="none";
+	document.getElementById('c_1_t').style.display="none";
+	document.getElementById('c_1_b').style.display="none";
+}
+
+function bgmusic(d,j){
+	var a=document.getElementById('player');
+	a.src=d;
+	var b=document.getElementById('m1');
+	b.innerHTML=j;
+	a.play();
+	
+	}
+	
+</script>
+</head>
+
+<body id="d0">
+	<!--音乐歌单-->
+    <table id="d1_6" style="display:none;" onMouseOver="xs(this.id)" onMouseOut="xs3(this.id)">
+    	<tr><td><a href="#" onClick="bgmusic(this.id,class)" id="song/aj.mp3" class="周杰伦--安静" >周杰伦--安静</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'张杰--逆战')" id="song/nz.mp3" >张杰--逆战</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'数码宝贝--FIRE！')" id="song/fire.mp3" >数码宝贝--FIRE！</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'beyond--光辉岁月')" id="song/ghsy.mp3" >beyond--光辉岁月</a></td></tr>
+        <tr><td><a href="#" onClick="bgmusic(this.id,'TFboys--青春纪念册')" id="song/qcjnc.mp3" >TFboys--青春纪念册</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'Usher--Yeah！')" id="song/Yeah.mp3" >Usher--Yeah！</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'Onerepublic--Love Runs Out')" id="song/lro.mp3" >Onerepublic--Love Runs Out</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'莫文蔚--阴天')" id="song/yt.mp3" >莫文蔚--阴天</a></td></tr>
+        <tr><td><a href="#" onClick="bgmusic(this.id,'李荣浩--李白')" id="song/lb.mp3" >李荣浩--李白</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'陈奕迅--十年')" id="song/sn.mp3" >陈奕迅--十年</a></td></tr>
+        <tr><td><a href="#" onClick="bgmusic(this.id,'僵尸歌曲')" id="song/JS.mp3" >僵尸歌曲</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'G-Twenty--Unspoken Word')" id="song/uw.mp3" >G-Twenty--Unspoken Word</a></td></tr>
+    	<tr><td><a href="#" onClick="bgmusic(this.id,'Trouble Maker--Trouble Maker')" id="song/tm.mp3" >Trouble Maker--Trouble Maker</a></td></tr>
+    	
+    </table>
+    <!--背景列表-->
+    <table id="d1_7" style="display:none;" onMouseOver="xs(this.id)" onMouseOut="xs3(this.id)" border="1px" >
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/al_2.jpg)">睡觉的阿狸</a></td>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/al_1.jpg)">七夕节--阿狸</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/al_0.jpg)">打电话的阿狸</a></td>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/che_0.jpg)">跑车---I</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/che_1.jpg)">跑车---II</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/che_2.jpg)">跑车---III</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/che_3.jpg)">跑车---IV</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/gou_0.jpg)">箱子里的猫</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/gou_1.jpg)">看窗外的猫</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/gou_2.jpg)">爬树的狗</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/gou_3.jpg)">看你的猫</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/hy_0.jpg)">回头的宇智波佐助</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/hy_1.jpg)">鸣人和佐助</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/hy_2.jpg)">某某形态的鸣人</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/lol_0.jpg)">LOL--狮子狗</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/lol_1.jpg)">LOL--琴女</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/lol_2.jpg)">LOL--李青</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/lol_3.jpg)">LOL--赵信</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/lu_0.jpg)">路上的指示牌</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/lu_1.jpg)">黎明的街道</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/lu_2.jpg)">寂静的街道</a></td>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/lu_3.jpg)">海边的小城</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/zxc_0.jpg)">自行车---I</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/zxc_1.jpg)">自行车---II</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#" onClick="bg(this.id)" id="url(images/zxc_2.jpg)">自行车---III</a></td>
+            <td><a href="#" onClick="bg(this.id)" id="url(images/zxc_3.jpg)">自行车---IV</a></td>
+        </tr>
+    </table>
+    
+<div class="d">
+	<!--导航条-->
+	<div class="d1">
+    	<div id="d1_0"><img src="images/黄阙.gif" width="58" height="30">
+        	</div>
+        <span>|</span>
+        <div id="d1_1">
+       	  <ul>
+       		<li><a href="#" onClick="cd('s_y')">主页</a></li>
+       		<li><a href="#" onClick="cd('grjj')">个人日常</a></li>
+       		<li><a href="#" onClick="cd('jbxx')">基本资料</a></li>
+       		<li><a href="#" onClick="cd('lyb')">留言板</a></li>
+       	  </ul>
+      	</div><span>|</span>
+        <div id="d1_2"><a href="#" onMouseOver="xs('d1_7')">背景</a>
+        </div>
+        <div id="d1_3"><a href="#" onMouseOver="xs('d1_6')">背景音乐</a>
+        </div>
+        <!--音乐播放器-->
+        <div id="d1_4">
+			<audio id="player" controls>
+				<source src="song/nz.mp3" type="audio/mp3">
+			</audio>
+		</div>
+        <!--歌名-->
+		<div id="d1_5">
+			<marquee id="m1">张杰--逆战</marquee>
+		</div>
+    </div>
+	<!--首页-->  
+    <div id="s_y">
+    	<div id="s_y_1">
+        	<div id="s_y_14">
+            	HAPPY<br>EVERY<br>DAY<br>&nbsp;&nbsp;&nbsp;&nbsp;huang&nbsp;&nbsp;&nbsp;&nbsp;que
+            </div>
+        	<div id="s_y_11"  onMouseOver="fk(),yd()"><span id="s1">最近访客</span>
+                	<table id="t_3">
+            			<tr><td>ヅ坏気⑽哫 '</td></tr>
+            			<tr><td>Y~ANWSWD</td></tr>
+                        <tr><td>那年那月那日</td></tr>
+            			<tr><td>阳光底下好乘凉か</td></tr>
+            		</table>
+            </div>
+            <div id="s_y_13">
+            <table>
+            <tr>
+            <td id="t_1">访</td><td id="t_1" onclick="zan()">赞</td>
+            </tr>
+            <tr>
+            <td id="t_2">3459</td><td id="t_2_1">12243</td>
+            </tr>
+            </table>
+            
+            </div>
+            
+            
+           
+        </div>
+        <div id="x1"></div><div id="x2"></div><div id="x3"></div><div id="x4"></div><div id="x5"></div><div id="x6"></div><div id="x7"></div><div id="x8"></div><div id="x9"></div>
+    </div>
+    
+    <div id="grjj" onclick="cd()">
+    	<h1 id="clock">2015.11.17 10:10:10</h1><br><br>
+    	<table id="c_1"  cellspacing=0>
+        	<tr>
+            	<td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td>
+            </tr>
+            <tr>
+            	<td></td><td></td><td></td><td></td><td></td><td></td><td>1</td>
+            </tr>
+            <tr>
+            	<td>2</td><td>3</td><td>4</td>
+                <td onMouseOver="rl('c_1_5')" onMouseOut="rl2('c_1_5')">5<div id="c_1_5">今天很快乐</div></td><td>6</td><td>7</td><td>8</td>
+            </tr>
+            <tr>
+            	<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+                <td onMouseOver="rl('c_1_14')" onMouseOut="rl2('c_1_14')">14<div id="c_1_14" onDblClick="sr()">请输入...</div></td>
+            <td>15</td>
+            </tr>
+            <tr>
+            	<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+            </tr>
+            <tr>
+            	<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+            </tr>
+            <tr>
+            	<td>30</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <div id="c_1_bk">
+            <textarea id="c_1_t">
+            </textarea>
+            <button id="c_1_b" onClick="tj('c_1_14')">
+            </button>
+            </div>
+    	<!--<div id="CalendarMain">
+			<横条>
+  			<div id="title"> 
+ 				 <selectBtn month 月份按钮>
+  				<a class="selectBtn month" href="javascript:" onclick="CalendarHandler.CalculateLastMonthDays();"><</a>
+  				<selectBtn selectYear 年份按钮>
+  				<a class="selectBtn selectYear" href="javascript:" onClick="CalendarHandler.CreateSelectYear(CalendarHandler.showYearStart);">2014年</a>
+  				<selectBtn selectMonth 选择月份按钮>
+  				<a class="selectBtn selectMonth" onClick="CalendarHandler.CreateSelectMonth()">6月</a> 
+  				<selectBtn nextMonth 下个月份按钮>
+  				<a class="selectBtn nextMonth" href="javascript:" onClick="CalendarHandler.CalculateNextMonthDays();">></a>
+  				<selectBtn currentDay 今天按钮>
+  				<a class="selectBtn currentDay" href="javascript:" onClick="CalendarHandler.CreateCurrentCalendar(0,0,0);">今天</a>
+  			</div>
+  			<div id="context">
+  			<横条2>
+   				<div class="week">
+                    <h3> 一 </h3>
+                    <h3> 二 </h3>
+                    <h3> 三 </h3>
+                    <h3> 四 </h3>
+                    <h3> 五 </h3>
+                    <h3> 六 </h3>
+                    <h3> 日 </h3>
+               </div>
+               <div id="center">
+                  <div id="centerMain">
+                       <div id="selectYearDiv">
+                      </div>
+                   <div id="centerCalendarMain">
+                      <div id="Container">
+                      </div>
+                  </div>
+                  <div id="selectMonthDiv">
+                  </div>
+               </div>
+    		</div>
+    <<当前时间>
+    <div id="foots"><a id="footNow">19:14:34</a></div>
+    
+  </div>-->
+  </table>
+  
+  
+    </div>
+    
+    <div id="jbxx">
+    <table id="t2_1" cellspacing=0>
+    <tr>
+    <td colspan="3" rowspan="3" style=" font-size:50px;">黄阙</td><td colspan="2">15138953028</td><td>学生</td>
+    </tr>
+    <tr>
+    <td colspan="2">huangque0724</td><td rowspan="3">牛镇高中</td>
+    </tr>
+    <tr>
+    <td colspan="2">597896132</td>
+    </tr>
+    <tr>
+    <td>55kg</td><td>170cm</td><td>93.7.24</td><td>处女座</td><td>鸡</td>
+    </tr>
+    <tr>
+    <td colspan="2">打游戏,旅游</td><td colspan="3">安徽省太湖县</td><td>男</td>
+    </tr>
+    </table>
+    <marquee>个性签名：好动、、、、、、、、、、、</marquee>
+    </div>
+    
+    <div id="lyb">
+    	<div id="lyb_1">
+        	<ul>
+                <li id="l2"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个sd希望能和你。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz1" onClick="zan2('z1')">赞</a>[<a id="z1">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l3"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz2" onClick="zan2('z2')">赞</a>[<a id="z2">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l4"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz3" onClick="zan2('z3')">赞</a>[<a id="z3">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l5"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz4" onClick="zan2('z4')">赞</a>[<a id="z4">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l6"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个sd希望能和你。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz5" onClick="zan2('z5')">赞</a>[<a id="z5">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l7"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz6" onClick="zan2('z6')">赞</a>[<a id="z6">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l8"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz7" onClick="zan2('z7')">赞</a>[<a id="z7">30</a>]&nbsp;&nbsp;</div></li>
+                
+                <li id="l9"  onMouseMove="lz(this.id)" onMouseOut="lz2(this.id)">匿名：空间很有个性，希望能和你认识。---2015.10.11<div>浏[10]&nbsp;&nbsp;<a id="lz8" onClick="zan2('z8')">赞</a>[<a id="z8">30</a>]&nbsp;&nbsp;</div></li>
+                
+            </ul>
+    	</div>
+        <div id="lyb_2">
+        </div>
+    </div>
+</div>
+</body>
+</html>
